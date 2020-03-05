@@ -1,0 +1,24 @@
+fromitertoolsimport permutations 
+s,p,k=map(int,input().split())
+L,q=[],0
+for i inrange(1,p+1):
+ifp%i==0and i<=s:
+        j=0
+while j<k:
+            L+=[i]
+            j+=1
+perm = permutations(L,k)
+forqweinlist(perm):
+s_exp=0
+p_exp=1
+for ele_1 inqwe:
+s_exp+=ele_1
+p_exp*=ele_1
+ifs_exp==s andp_exp==p:
+        q+=1
+foreleinqwe:
+print(ele,end=" ")
+break
+if q==0:
+print("NO")
+
